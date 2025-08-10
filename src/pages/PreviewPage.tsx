@@ -50,12 +50,12 @@ const PreviewPage: React.FC = () => {
     <Box sx={{ p: 6, backgroundColor: appTheme.colors.background, minHeight: "100vh" }}>
       {/* Page Heading */}
       <Typography
-        variant="h4"
+        variant="h6"
         sx={{
           mb: 4,
           fontWeight: appTheme.font.weightBold,
           color: appTheme.colors.textPrimary,
-          textAlign: "left",
+          textAlign: "center",
         }}
       >
         Preview Form
