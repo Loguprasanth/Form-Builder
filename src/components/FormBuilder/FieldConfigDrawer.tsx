@@ -4,7 +4,6 @@ import GeneralTab from "./GeneralTab";
 import ValidationTab from "./ValidationTab";
 import type { FormField } from "../../types/FormField";
 import { appTheme } from "../../theme";
-import AdvancedTab from "./AdvancedTab/AdvancedTab";
 // 🔹 Common Styles
 const borderColor = "#e5e7eb"; // Tailwind border-gray-200
 const gray500 = "#6b7280";

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { appTheme } from "../../theme";
 import FieldCard from "./FieldCard";
-import type { FieldType } from "./FieldCard";
+import type { FieldType } from "../../types/FormField"; // adjust path
 
 
 interface Field {
@@ -46,11 +46,18 @@ const FormCanvas: React.FC = () => {
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           {fields.map((field) => (
             <FieldCard
-              key={field.id}
+              field={{
+                id: "",
+                label: "",
+                type: "number",
+                required: undefined,
+                placeholder: undefined,
+                derivedFrom: undefined,
+                validation: undefined
+              }} key={field.id}
               {...field}
               onEdit={() => handleEdit(field.id)}
-              onDelete={() => handleDelete(field.id)}
-            />
+              onDelete={() => handleDelete(field.id)}            />
           ))}
         </Box>
       </Box>

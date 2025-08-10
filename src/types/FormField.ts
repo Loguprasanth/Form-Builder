@@ -7,7 +7,10 @@ export type FieldType =
   | "radio"
   | "checkbox"
   | "date"
-  | "password";
+  | "password"
+  | "derived"; // ✅ added
+
+
     
 export type FormField = {
   id: string;
@@ -15,5 +18,19 @@ export type FormField = {
   type: FieldType;
   required?: boolean;
   placeholder?: string;
-  derivedFrom?: string; // for derived fields
+  derivedFrom?: string;
+   helpText?: string;
+  defaultValue?: string;
+  validation?: {
+  minLength?: number;
+  maxLength?: number;
+  pattern?: RegExp;
+  lengthEnabled?: boolean; // ✅ optional
+  required?: boolean;      // ✅ optional
+  email?: boolean;         // ✅ added for your email checkbox
+  passwordRules?: Record<string, boolean>; // ✅ type fixed
+  custom?: (value: string) => boolean | string;
 };
+
+};
+
